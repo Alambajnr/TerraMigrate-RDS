@@ -77,6 +77,7 @@ Connect to the Source RDS via MySQL Workbench, seed the `OnlineMerchStore` data,
 The following screenshots show the successful provisioning of the Source and Target RDS instances using Terraform.
 
 <p align="center">
+<img src="./assets/terraform_source_database.png" width="400" title="Source DB Provisioning">
 <img src="./assets/terraform_target_database.png" width="400" title="Target DB Provisioning">
 </p>
 
