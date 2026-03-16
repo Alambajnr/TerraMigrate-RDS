@@ -108,7 +108,7 @@ To ensure a successful migration, I monitored the task through two critical vali
 Using MySQL Workbench to connect directly to the target RDS instance to verify that the schema, tables, and data were replicated perfectly.
 
 <p align="center">
-<img src="./assets/terraform-source-db.png" width="400" title="Source DB Provisioning">
+<img src="./assets/terraform-source-db.png" width="800" title="Source DB Provisioning">
 <img src="./assets/microsoft_targetdb_workbench.png" width="800" title="MySQL Workbench Verification">
 </p>
 
