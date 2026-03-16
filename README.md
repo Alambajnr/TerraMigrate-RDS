@@ -72,6 +72,45 @@ Connect to the Source RDS via MySQL Workbench, seed the `OnlineMerchStore` data,
 
 ---
 
+📊 Deployment & Migration Validation
+1. Infrastructure as Code (Terraform)
+The following screenshots show the successful provisioning of the Source and Target RDS instances using Terraform.
+
+<p align="center">
+<img src="./assets/terraform_source_database.png.png" width="400" title="Source DB Provisioning">
+<img src="./assets/terraform_target_database.png" width="400" title="Target DB Provisioning">
+</p>
+
+2. AWS DMS Setup & Connectivity
+Verification of the Replication Instance and the Target Endpoint connection.
+
+<p align="center">
+<img src="./assets/replication_instance.png" width="450" title="DMS Replication Instance">
+<img src="./assets/target_endpoint.png" width="350" title="Target Endpoint Status">
+</p>
+
+### 3. Migration Task Deep-Dive
+To ensure a successful migration, I monitored the task through two critical validation phases:
+
+* **Task Execution & State:** I verified that the DMS Replication Task transitioned successfully to `Load complete`. This confirms the handshake between the Source and Target Endpoints was successful.
+  
+<p align="center">
+  <img src="./assets/task-status-complete.png" width="800" title="DMS Task Completion">
+</p>
+
+* **Table-Level Statistics (Data Integrity):** The "Moment of Truth." This view confirms that the row counts for `products`, `customers`, and `orders` match the source database exactly, with zero validation errors or failed records.
+
+<p align="center">
+  <img src="./assets/dms-table-stats.png" width="800" title="DMS Table Statistics">
+</p>
+
+4. Final Database Verification
+Using MySQL Workbench to connect directly to the target RDS instance to verify that the schema, tables, and data were replicated perfectly.
+
+<p align="center">
+<img src="./assets/microsoft_targetdb_workbench.png" width="800" title="MySQL Workbench Verification">
+</p>
+
 ## 🔍 Engineering Highlights
 
 * **Task Mapping:** JSON-based object-mapping to selectively migrate the e-commerce schema.
