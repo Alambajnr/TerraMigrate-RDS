@@ -25,9 +25,10 @@ resource "aws_dms_replication_subnet_group" "example" {
   replication_subnet_group_id          = "example-id"
 
   subnet_ids = [
-    "subnet-0cb5eeaa39642ecbf",
-    "subnet-0e8b3d7199bf251a4", "subnet-07cf38f6549e4b98c"
-  ]
+    "subnet-080934cd125c8a544", "subnet-0194b82d670469b4e", 
+    "subnet-06f94ab6b4606e107", "subnet-023c7d58d5f06fdcf", 
+    "subnet-070ad34250b5830d0", "subnet-07f534d3300928ad4"
+    ]
 
   tags = {
     Name = "example-id"
