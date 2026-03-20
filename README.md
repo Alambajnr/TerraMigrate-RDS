@@ -1,5 +1,5 @@
-
-### Updated Professional README.md (Cloud-to-Cloud Version)
+### 🛡️ Project TerraMigrate-RDS: Zero-Downtime Cloud Data Migration
+Enterprise-Grade Database Migration (MySQL to Aurora/RDS) via AWS DMS & Terraform
 
 ```markdown
 # AWS Cloud Data Migration: RDS MySQL to Amazon Aurora/RDS
@@ -124,6 +124,3 @@ Using MySQL Workbench to connect directly to the target RDS instance to verify t
 **Portfolio:** [www.linkedin.com/in/collinsuket]
 
 ```
-
----
-
